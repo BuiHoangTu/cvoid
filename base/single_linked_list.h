@@ -91,11 +91,13 @@ sln* sll_pop_back(sll* list);
 void sll_free(sll* list, void (*void_free_data)(void*));
 
 /**
+ * @note This function is unavailable at the time of defined due to the lack of `defining function during
+ * runtime` or `nested function`
  * @brief Construct a function to free sll
  * @param free_data A function pointer how to free data in sll
  * @return A function to free whole sll
  */
-void_free_func * sll_free_constructor(void_free_func free_data);
+//void_free_func * sll_free_constructor(void_free_func free_data);
 
 
 #endif  // LIST_SLL_H_

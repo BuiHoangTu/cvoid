@@ -73,17 +73,17 @@ void sll_free(sll* list, void_free_func voidFreeFunc) {
     free(list);
 }
 
-void_free_func *sll_free_constructor(void_free_func free_data) {
-    void ret_func(sll* list){
-        sln * tmpnode;
-        if (free_data != NULL)
-            for (sln * curnode = list->front; curnode != NULL; curnode = tmpnode) {
-                free_data(curnode->data);
-                tmpnode = curnode->next;
-                free(curnode);
-            }
-        free(list);
-    }
-    return &ret_func;
-}
+//void_free_func *sll_free_constructor(void_free_func free_data) {
+//    void ret_func(sll* list){
+//        sln * tmpnode;
+//        if (free_data != NULL)
+//            for (sln * curnode = list->front; curnode != NULL; curnode = tmpnode) {
+//                free_data(curnode->data);
+//                tmpnode = curnode->next;
+//                free(curnode);
+//            }
+//        free(list);
+//    }
+//    return &ret_func;
+//}
 
