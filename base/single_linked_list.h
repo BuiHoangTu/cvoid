@@ -90,14 +90,25 @@ sln* sll_pop_back(sll* list);
 */
 void sll_free(sll* list, void (*void_free_data)(void*));
 
-/**
- * @note This function is unavailable at the time of defined due to the lack of `defining function during
- * runtime` or `nested function`
- * @brief Construct a function to free sll
- * @param free_data A function pointer how to free data in sll
- * @return A function to free whole sll
- */
+///**
+// * @note This function is unavailable at the time of defined due to the lack of `defining function during
+// * runtime` or `nested function`
+// * @brief Construct a function to free sll
+// * @param free_data A function pointer how to free data in sll
+// * @return A function to free whole sll
+// */
 //void_free_func * sll_free_constructor(void_free_func free_data);
 
+/**
+ * @brief You must define this function to use sll_free_all
+ */
+void sll_free_data(void* data);
+
+/**
+ * @brief Free all list
+ * @param list sll
+ * @note You must define sll_free_data, or else the data will not be freed
+ */
+void sll_free_all(sll* list);
 
 #endif  // LIST_SLL_H_

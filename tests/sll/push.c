@@ -1,7 +1,7 @@
 #include "all.c"
 
-void free_i(void* v) {
-    free(v);
+void sll_free_data(void* data){
+    free(data);
 }
 
 int main() {
@@ -17,7 +17,6 @@ int main() {
         printf("%d\n", *((int*)(n->data)));
     }
 
-    void_free_func *freeList = sll_free_constructor(free_i);
-    freeList(l);
+    sll_free_all(l);
 
 }

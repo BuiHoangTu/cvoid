@@ -87,3 +87,14 @@ void sll_free(sll* list, void_free_func voidFreeFunc) {
 //    return &ret_func;
 //}
 
+void sll_free_all(sll *list) {
+    sln * tmpnode;
+    for (sln * curnode = list->front; curnode != NULL; curnode = tmpnode) {
+        sll_free_data(curnode->data);
+        tmpnode = curnode->next;
+        free(curnode);
+    }
+    free(list);
+}
+
+
