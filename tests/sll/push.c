@@ -17,6 +17,7 @@ int main() {
         printf("%d\n", *((int*)(n->data)));
     }
 
-    sll_free(l, free_i);
+    void_free_func *freeList = sll_free_constructor(free_i);
+    freeList(l);
 
 }
