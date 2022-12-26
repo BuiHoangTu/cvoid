@@ -1,0 +1,20 @@
+#vsc
+.vscode
+
+#Visual Studio
+.vs
+
+# Clion
+.idea/
+*.iml
+*.iws
+
+# Compiled Files
+[bB]in/
+[bB]uild/
+/bin1/
+[oO]ut/
+cmake-build-*
+
+# note
+[tT][oO][dD][oO].txt

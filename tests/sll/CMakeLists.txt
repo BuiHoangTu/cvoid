@@ -1,0 +1,1 @@
+add_executable (push push.c)
